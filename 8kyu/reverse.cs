@@ -1,14 +1,14 @@
 using System;
-
-// 1. Test your Codewars method here
-int result = Kata.Multiply(5, 4);
-Console.WriteLine($"Result: {result}"); 
-
-// 2. Paste the Codewars class structure below
-public class Kata 
+namespace Codewars._8kyu;
+public static class Reverse
 {
-    public static int Multiply(int a, int b) 
-    {
-        return a * b;
-    }
+
+  public static string Solution(string str) 
+  {
+    char [] charArray= str.ToCharArray();
+    Array.Reverse(charArray);
+    string reverdArray=string.Join("", charArray);
+    Console.WriteLine(reverdArray);
+    throw new NotImplementedException("TODO: Kata.Solution(string) => string");
+  }
 }
