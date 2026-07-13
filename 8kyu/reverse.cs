@@ -7,7 +7,8 @@ public static class Reverse
   {
     char [] charArray= str.ToCharArray();
     Array.Reverse(charArray);
-    string reversedArray= new string(charArray);
-    return reversedArray;
+    string reverdArray= string.Join("", charArray);
+    Console.WriteLine(reverdArray);
+    throw new NotImplementedException("TODO: Kata.Solution(string) => string");
   }
 }

@@ -1,3 +1,3 @@
-﻿using Codewars._8kyu;
+﻿using Codewars._6kyu;
 
-System.Console.WriteLine(Reverse.Solution("Birasa"));
+System.Console.WriteLine(Kata.Multiples(10));
