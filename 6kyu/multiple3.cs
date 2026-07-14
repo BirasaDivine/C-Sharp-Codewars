@@ -1,4 +1,4 @@
-public static class Kata
+public static class Multiple3
 {
     public static int Solution(int value)
     {

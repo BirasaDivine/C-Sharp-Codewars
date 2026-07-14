@@ -1,3 +1,4 @@
-﻿using Codewars._6kyu;
+﻿using _6kyu;
+using System;
 
-System.Console.WriteLine(Kata.Multiples(10));
+Console.WriteLine(PhoneNumber.CreatePhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
