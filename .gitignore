@@ -1,0 +1,4 @@
+bin/
+obj/
+*.user
+C-Sharp-Codewars.csproj
