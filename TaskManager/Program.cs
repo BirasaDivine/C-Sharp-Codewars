@@ -16,12 +16,15 @@ namespace TaskManagerApp
 
         // manager.DisplayByAssignee("Divine");
         // manager.DisplayByAssignee("Birasa");  
-        manager.SubmitForReview(new TaskItem(6, "Test feature", "Divine", 3));
-        manager.SubmitForReview(new TaskItem(7, "Refactor code", "Divine", 4));
+       
+        TaskItem task8 = new TaskItem(8, "Deploy app", "Divine", 5);
+        manager.CompletedTask(task8);
+        Console.WriteLine($"Before undo, IsComplete: {task8.IsComplete}");   // True
 
-        manager.ReviewNext();   
-        manager.ReviewNext();   
-        manager.ReviewNext();    
+        manager.UndoLastCompletion();
+        Console.WriteLine($"After undo, IsComplete: {task8.IsComplete}");    // False — proves the undo actually worked
+
+        manager.UndoLastCompletion();   // "Nothing to undo." — stack's empty now    
 } 
 }
 }
