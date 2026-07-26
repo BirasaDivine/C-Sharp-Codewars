@@ -72,6 +72,27 @@ namespace TaskManagerApp
             }
                 
         }
+    private Stack<TaskItem> _recentlyCompleted = new Stack<TaskItem>();
+    public void CompletedTask(TaskItem task)
+        {
+            task.IsComplete = true;
+            _recentlyCompleted.Push(task);
+            Console.WriteLine($"{task.Title} completed");
+        }
+    public void UndoLastCompletion()
+        {
+           if (_recentlyCompleted.Count > 0)
+            {
+                TaskItem mostRecent= _recentlyCompleted.Pop();
+                mostRecent.IsComplete=false;
+                Console.WriteLine($"Undo: {mostRecent.Title}");
+            } 
+            else
+            {
+                Console.WriteLine($" Nothing to Undo");
+            }
+        }
+    
 
 } 
 }
